@@ -1,5 +1,5 @@
 def main():
-    book_path = "books/Three Rings for the Elven Kings.txt"
+    book_path = "books/Romeo&Juliet.txt"
     text = get_book_text(book_path)
     num_words = get_num_words(text)
     chars_dict = get_chars_dict(text)
