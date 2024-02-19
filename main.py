@@ -1,20 +1,20 @@
 def main():
-    book_path = "books/Romeo&Juliet.txt"
+    book_path = input("Welches der folgenden Bücher wollen sie analysieren? books/Romeo&Juliet.txt, books/Frankenstein.txt oder books/GoT.txt: ")
     text = get_book_text(book_path)
     num_words = get_num_words(text)
     chars_dict = get_chars_dict(text)
     chars_sorted_list = chars_dict_to_sorted_list(chars_dict)
 
-    print(f"--- Begin report of {book_path} ---")
-    print(f"{num_words} words found in the document")
+    print(f"--- Beginne die Buchstabenzählung von {book_path} ---")
+    print(f"{num_words} Wörter wurden gefunden")
     print()
 
     for item in chars_sorted_list:
         if not item["char"].isalpha():
             continue
-        print(f"The '{item['char']}' character was found {item['num']} times")
+        print(f"Der Buchstabe '{item['char']}' wurde {item['num']} mal gefunden")
 
-    print("--- End report ---")
+    print("--- Beende Buchstabenzählung ---")
 
 def get_num_words(text):
     words = text.split()
