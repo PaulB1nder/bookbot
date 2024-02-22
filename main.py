@@ -1,5 +1,5 @@
 def main():
-    book_path = input("Welches der folgenden Bücher wollen sie analysieren? books/Romeo&Juliet.txt, books/Frankenstein.txt oder books/GoT.txt: ")
+    book_path = input("Welches der folgenden Bücher wollen sie analysieren? Romeo&Juliet.txt, Frankenstein.txt oder GoT.txt: ")
     text = get_book_text(book_path)
     num_words = get_num_words(text)
     chars_dict = get_chars_dict(text)
